@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/983ddf56f4.js" crossorigin="anonymous"></script>
     <title>JavaScript Tools</title>
   </head>
   <body>
@@ -12,18 +13,40 @@
     </header>
     <main>
       <div class="layout">
-        <div class="counter">
+        <section class="counter">
           <h2>Counter</h2>
-          <p id="counterNumber">10</p>
+          <p id="counterNumber">0</p>
           <div class="countButtons">
-            <button onclick="decreaseCounter()"">DECREASE</button>
-            <button onclick="resetCounter()">RESET</button>
-            <button onclick="increaseCounter()">INCREASE</button>
+            <button class="customButton" onclick="decreaseCounter()"">DECREASE</button>
+            <button class="customButton" onclick="resetCounter()">RESET</button>
+            <button class="customButton" onclick="increaseCounter()">INCREASE</button>
           </div>
-        </div>
-        <div class="foo">
-          <h2>Foo</h2>
-        </div>
+        </section>
+        <section class="ticTacToe">
+          <h2>Tic Tac Toe</h2>
+          <div id="multiplayerButtons">
+              <button class="customButton gamemodeActive" id="multiPlayer" onclick="activeIA(this.id)">MULTIPLAYER</button>
+              <button class="customButton" id="onePlayer" onclick="activeIA(this.id)">ONE PLAYER</button>
+          </div>
+          <table id="gameBoard">
+            <tr>
+                <td id="box0" onclick="tileClicked(this.id)"></td>
+                <td id="box1" onclick="tileClicked(this.id)"></td>
+                <td id="box2" onclick="tileClicked(this.id)"></td>
+            </tr>
+            <tr>
+                <td id="box3" onclick="tileClicked(this.id)"></td>
+                <td id="box4" onclick="tileClicked(this.id)"></td>
+                <td id="box5" onclick="tileClicked(this.id)"></td>
+            </tr>
+            <tr>
+                <td id="box6" onclick="tileClicked(this.id)"></td>
+                <td id="box7" onclick="tileClicked(this.id)"></td>
+                <td id="box8" onclick="tileClicked(this.id)"></td>
+            </tr>
+          </table>
+          <button class="customButton" onclick="resetTicTacToe()">RESET</button>
+        </section>
       </div>
     </main>
   </body>
